@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Gradvis",
+  "description": "Förbättrar läsupplevelsen på gradvall.se och fixar automatiska Spotifylänkar på skivrecensioner",
+  "version": "1.0.1",
+
+  "icons": {
+    "128": "images/gradvis.png"
+  },
+
+  "permissions": [
+    "http://www.gradvall.se/",
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": ["gradvis.js"],
+    "persistent": false
+  },
+
+  "page_action": {
+    "default_title": "Gradvis",
+    "default_icon": "images/gradvis.png",
+    "default_popup": "popup.html"
+  }
+
+}
