@@ -17,8 +17,10 @@
 + Exempel på [Årslista](http://www.gradvall.se/artiklar.asp?entry_id=1047) och [vanliga recensioner](http://www.gradvall.se/artiklar.asp?entry_id=1050)
 
 ### Övriga funktioner
-Dela länkar via Twitter, Facebook
-Spara bokmärke till [Kippt](http://kippt.com) och/eller läs senare via [Pocket](http://getpocket.com)
++ Dela länkar via Twitter, Facebook
++ Spara bokmärken till [Kippt](http://kippt.com) och/eller läs senare via [Pocket](http://getpocket.com)
+
+### Installera
 
 + SE [Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
 + EN [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
