@@ -1,7 +1,7 @@
 # Gradvis
 
-[Gradvis är ett Chrome-tillägg](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) som förbättrar läsupplevelsen på [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050) och automatiskt skapar Spotify-länkar på skivrecensioner.
-[Gradvis is a Chrome Extension](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) that automatically enhances the browsing experience on [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050)
++ SE [Gradvis är ett Chrome-tillägg](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) som förbättrar läsupplevelsen på [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050) och automatiskt skapar Spotify-länkar på skivrecensioner.
++ ENG [Gradvis is a Chrome Extension](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) that automatically enhances the browsing experience on [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050)
 
 > En hyllning till Jan Gradvalls texter.
 
@@ -10,16 +10,16 @@
 + Exempel på [Intervju med Quincy Jones](http://www.gradvall.se/artiklar.asp?entry_id=1048)
 
 ### Skivrecensioner
-+ Förbättrad lösupplevelse
-+ Automatiska länkar till [Spotify](http://spotify)
++ Förbättrad läsupplevelse
++ Automatiska länkar till Spotify
 + Exempel på [Årslista](http://www.gradvall.se/artiklar.asp?entry_id=1047) och [vanliga recensioner](http://www.gradvall.se/artiklar.asp?entry_id=1050)
 
 ### Övriga funktioner
 Dela länkar via Twitter, Facebook
 Spara bokmärke till [Kippt](http://kippt.com) och/eller läs senare via [Pocket](http://getpocket.com)
 
-[Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
-[Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
++ SE [Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
++ ENG [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
 
 ### Skärmdumpar
 
