@@ -1,12 +1,14 @@
 # Gradvis
 
+[![Gradvis](https://dl.dropboxusercontent.com/u/1162759/icon.png)](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn)
+
 + SE [Gradvis är ett Chrome-tillägg](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) som förbättrar läsupplevelsen på [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050) och automatiskt skapar Spotify-länkar på skivrecensioner.
-+ ENG [Gradvis is a Chrome Extension](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) that automatically enhances the browsing experience on [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050)
++ EN [Gradvis is a Chrome Extension](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) that automatically enhances the browsing experience on [www.gradvall.se](http://www.gradvall.se/artiklar.asp?entry_id=1050)
 
 > En hyllning till Jan Gradvalls texter.
 
 ### Artiklar, krönikor och skivrecensioner
-+ Fin ypografi med [Noticia](http://www.google.com/fonts/specimen/Noticia+Text) satt i två spalter för förbättrad läsupplevelse
++ Fin typografi med [Noticia](http://www.google.com/fonts/specimen/Noticia+Text) satt i två spalter för förbättrad läsupplevelse
 + Exempel på [Intervju med Quincy Jones](http://www.gradvall.se/artiklar.asp?entry_id=1048)
 
 ### Skivrecensioner
@@ -19,7 +21,7 @@ Dela länkar via Twitter, Facebook
 Spara bokmärke till [Kippt](http://kippt.com) och/eller läs senare via [Pocket](http://getpocket.com)
 
 + SE [Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
-+ ENG [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
++ EN [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
 
 ### Skärmdumpar
 
