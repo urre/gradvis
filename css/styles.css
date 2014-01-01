@@ -25,6 +25,11 @@
 	transition        :all 200ms ease-out, all 200ms ease-in;
 }
 
+.nobr {
+	color: #607e75 !important;
+	font-weight: bold;
+}
+
 .twitter {
 	color: #607e75 !important;
 	font-weight: bold;
