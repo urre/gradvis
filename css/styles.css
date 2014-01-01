@@ -271,6 +271,12 @@ h3 {
 	text-indent: 2em !important;
 }
 
+#main iframe {
+	display: block;
+	clear: both;
+	margin: .4em 0 0 0;
+}
+
 #main h5 {
 	font-size: 1.8em !important;
 	font-family: 'Noticia' !important;
