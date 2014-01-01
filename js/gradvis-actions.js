@@ -227,7 +227,7 @@
                                 // Make link and include Spotify play button widget
                                 if(found !== -1) {
                                     var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+first_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                                    var discover_links = '<div class="discover">Mer om '+artist+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a></div>';
+                                    var discover_links = '<div class="discover">'+artist+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a></div>';
                                     $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
                                 }
 
@@ -275,7 +275,7 @@
                 success: function (data) {
                     var album_uri = data.albums[0].href;
                     var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+album_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                    var discover_links = '<div class="discover">Mer om '+artist_name+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_name_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist_name)+'" alt="Upptäck mer på Wikipedia"></a></div>';
+                    var discover_links = '<div class="discover">'+artist_name+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_name_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist_name)+'" alt="Upptäck mer på Wikipedia"></a></div>';
                     $('#main p').replaceText(album_title, '<a href="spotify:search:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
 
                     Gradvis.remove_duplicate_links();
