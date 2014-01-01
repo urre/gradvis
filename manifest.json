@@ -3,7 +3,7 @@
 
   "name": "Gradvis",
   "description": "Förbättrar läsupplevelsen på www.gradvall.se och fixar automatiska Spotifylänkar på skivrecensioner",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "icons": {
     "128": "images/gradvis.png"

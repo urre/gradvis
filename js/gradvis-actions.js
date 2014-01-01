@@ -227,18 +227,19 @@
                                 // Make link and include Spotify play button widget
                                 if(found !== -1) {
                                     var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+first_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                                    $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+'' );
+                                    var discover_links = '<div class="discover">Mer om '+artist+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a></div>';
+                                    $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
                                 }
 
                                 Gradvis.remove_duplicate_links();
 
                             } else {
-                                Gradvis.get_artist_playbutton(artist_clean, album_title, album_title_clean);
+                                Gradvis.get_artist_playbutton(artist, artist_clean, album_title, album_title_clean);
 
                             }
                         },
                         error: function(data) {
-                            console.log('error');
+
 
                         }
                     });
@@ -256,6 +257,7 @@
                 if (seen[href]) {
                     $(this).removeClass('spotify').removeAttr('href');
                     $(this).next('iframe').remove();
+                    $(this).next('.discover').remove();
                 } else {
                     seen[href] = true;
                 }
@@ -263,7 +265,7 @@
 
         },
 
-        get_artist_playbutton: function(artist_name, album_title, album_title_clean){
+        get_artist_playbutton: function(artist_name, artist_name_clean, album_title, album_title_clean){
 
             // Use Spotify Metadata API, now searching for album by artist name
             $.ajax({
@@ -271,12 +273,10 @@
                 url: "http://ws.spotify.com/search/1/album.json?q=artist:"+artist_name+"",
                 dataType: "json",
                 success: function (data) {
-                    console.log('Album finns inte, gör en artistwidget istället');
                     var album_uri = data.albums[0].href;
-                    console.log(album_uri);
-
                     var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+album_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                    $('#main p').replaceText(album_title, '<a href="spotify:search:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+'' );
+                    var discover_links = '<div class="discover">Mer om '+artist_name+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_name_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist_name)+'" alt="Upptäck mer på Wikipedia"></a></div>';
+                    $('#main p').replaceText(album_title, '<a href="spotify:search:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
 
                     Gradvis.remove_duplicate_links();
 
