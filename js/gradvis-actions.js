@@ -3,7 +3,7 @@
 
  *
  *
- * Gradvis, an Chrome extension enhancing Gradvis.se
+ * Gradvis, an Chrome extension enhancing Gradvall.se
  * Code by @urre
  *
  */

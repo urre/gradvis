@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Gradvis",
-  "description": "Förbättrar läsupplevelsen på gradvall.se och fixar automatiska Spotifylänkar på skivrecensioner",
+  "description": "Förbättrar läsupplevelsen på www.gradvall.se och fixar automatiska Spotifylänkar på skivrecensioner",
   "version": "1.0.1",
 
   "icons": {
