@@ -103,6 +103,20 @@
 	vertical-align: middle !important;
 }
 
+.discover .discogs:after {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-left: 10px;
+	margin-right: 2px;
+	text-decoration: none;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAz5JREFUOI01lEtoXFUch79z7rm5M3mWPCY4CSEUSdu8tE0sqEEJLgIG8oAiVjCG4CroqpusJIIrle4MKl0U0eKy2mSIC5HQaNG0TSNOcdHE2KZtXiYZJ5nM3Dn3/F0k/vYffPDBT4mIAFhrMcawt7fH1NQUi4t3uH37Ds4JXV1n6e5+gdHRUZLJBqyNMMYDAOec5HI5ERFJpVLS3NwsWmsJgkASiYQ0NTVJXV2d9PT0yKVLEzI3NyciIvl8XqIoEsIwFBGR8fFxAQSQ+vp6SSYbpaGhQbq6uuT8+Rfl6tWvJZ1ekdOn22Ro6E0REQnDULTv+6RSKaampgiCAM/z2NraAg4xRqFUSGvrGVpanuXKlc84ebKZ+fmfuHHje3zfR21ubkpLSwvZbBYRwTmH52mi6AS1NRUYv4T33p+gs+MZLl/+hELhEFCsr68zPz+Pl0gkJmdmZvA8QxRZlALnhKHXhbcvHtDeus/Txzt88+2vGJMnny+ys7PL2tojamtr8URkcnl5GVBo7XBO8c7FUj7+8JDODsurLxXpPLPKk8fb/DgXIZKhWHQUiyGZTAZljBFrLf8vFivhqy/gtVdC/s2WIQ5qqvMspeGtd5Mc5PJYm0NEs7+fxQRBgLVH6qCoqjRUVBSpqoQ/H9RzcAiNyRWKLkaJH7K2u30cC5RSmPLycvL5PFVVJ4jFNJmM5o/0Dt2d0Naygu9BsQiH2ZCn6zsodQSLQCwWwxsdHZ28e3eRmppaEokE8Xic1YfllJXmMCWWJ+uKByuGjz4t4a+/C2gFxpQAwtjYGGp2dlaGh4fp6OggihzJZA3PPf8yK8tbPFz+ktKyam79FpLd/wd1LG+MwVrL9PQ0uq+vj6GhIXK5A5qbGykrq+WNCwNUVhZZftTIwqJBaYdWR3A8Hsday+DgIP39/ShrrRQKBc6dO8upU61MTHzAvXtprl37nFxun+2tTQphxO5uBmuLOOeoq6tjdXWVIAjQWmt83+fmzZ9pb2/j/v3fWVq6RXV1Fb4fx0YeSnmEYQHnHAMDA6TTabTWaK1RIiLOObTWAKRSP7Cw8AvXr3/HwUGOjY0NgiBgZGSE3t5e+vv7OX4AlFL8B66Pl1IJwP4XAAAAAElFTkSuQmCC) !important;
+	background-repeat: no-repeat;
+	opacity: 1;
+	vertical-align: middle !important;
+}
+
 .discover .wikipedia:after {
 	content: '';
 	display: inline-block;
