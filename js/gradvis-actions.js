@@ -35,8 +35,8 @@
 
             opt.keys[0] =
                 {
-                    keyword:'Jan Gradvis',
-                    prefix:'<a href="http://twitter.com/janGradvis" class="twitter">',
+                    keyword:'Jan Gradvall',
+                    prefix:'<a href="http://twitter.com/janGradvall" class="twitter">',
                     suffix:'</a>',
                     partials: true
             };
