@@ -3,7 +3,7 @@
 
   "name": "Gradvis",
   "description": "Förbättrar läsupplevelsen på www.gradvall.se och fixar automatiska Spotifylänkar på skivrecensioner",
-  "version": "1.0.5",
+  "version": "1.0.8",
 
   "icons": {
     "128": "images/gradvis.png"
@@ -11,6 +11,7 @@
 
   "permissions": [
     "http://www.gradvall.se/",
+    "http://*.gradvall.se/",
     "tabs"
   ],
 
@@ -19,10 +20,13 @@
     "persistent": false
   },
 
-  "page_action": {
-    "default_title": "Gradvis",
-    "default_icon": "images/gradvis.png",
-    "default_popup": "popup.html"
-  }
+ "browser_action": {
+       "default_icon": {
+         "19": "images/gradvis.png",
+         "38": "images/gradvis.png"
+       },
+       "default_title": "Gradvis",
+       "default_popup": "popup.html"
+   }
 
 }
