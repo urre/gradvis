@@ -14,6 +14,7 @@ function gradvis(tab) {
         chrome.tabs.insertCSS(tab.id, { "file": "css/styles.css" });
         chrome.tabs.executeScript(null, {"file": "js/jquery.min.js"});
         chrome.tabs.executeScript(null, {"file": "js/jquery.ba-replacetext.js"});
+        chrome.tabs.executeScript(null, {"file": "js/jquery.tweetHighlighted.js"});
         chrome.tabs.executeScript(null, {"file": "js/gradvis-actions.js"});
     }
 }

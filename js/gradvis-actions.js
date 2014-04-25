@@ -24,6 +24,9 @@
 
             // Wrap Jan Gradvis in Twitter links to @janGradvis
             this.GradvisTwitter();
+
+            // Tweet highlighted text
+            this.tweetHighlights();
         },
 
         // Wrap Jan Gradvis in Twitter links to @janGradvis
@@ -196,7 +199,7 @@
                 $("span:contains('Betyg:')").each(function() {
 
                     var artist       = $(this).prev().prev().prev()[0].previousSibling.nodeValue.trim();
-                    var artist_clean = artist.replace(/\s/g,"+");
+                    var artist_clean = artist.replace(/\s/g,"+").replace(/&/g, '+');
                     var artist_parts = artist_clean.split("+");
 
                     var album_title       = $(this).prev().prev()[0].previousSibling.nodeValue.trim();
@@ -285,7 +288,27 @@
             });
 
 
-        }
+        },
+
+        tweetHighlights: function(){
+
+            $('body').tweetHighlighted({
+                 // html node to use as the 'Tweet' button
+                 node: '<a class="tweet-content" href="#"></a>',
+                 // class attribute to attach to the node
+                 cssClass: 'btn btn-primary',
+                 // minimum length of selected text needed to show the 'Tweet' button
+                 minLength: 6,
+                 // maximum length of selected text after which the 'Tweet' button is not shown
+                 maxLength: 120,
+                 // any extra string to attach to every tweet (mostly used to attach urls)
+                 extra: '- från Gradvall.se: '+window.location.href,
+                 // twitter 'via' handle (basically appends 'via @twitterhandle' to the tweet)
+                 // arguments to pass to the window.open() function
+                 popupArgs: 'width=600,height=600,toolbar=0,location=0'
+              });
+
+        },
 
 
 	}
