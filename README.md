@@ -7,19 +7,6 @@
 
 > En hyllning till Jan Gradvalls texter.
 
-### Artiklar, krönikor och skivrecensioner
-+ Fin typografi med [Noticia](http://www.google.com/fonts/specimen/Noticia+Text) satt i två spalter för förbättrad läsupplevelse
-+ Exempel på [Intervju med Quincy Jones](http://www.gradvall.se/artiklar.asp?entry_id=1048)
-
-### Skivrecensioner
-+ Förbättrad läsupplevelse
-+ Automatiska länkar till Spotify
-+ Exempel på [Årslista](http://www.gradvall.se/artiklar.asp?entry_id=1047) och [vanliga recensioner](http://www.gradvall.se/artiklar.asp?entry_id=1050)
-
-### Övriga funktioner
-+ Dela länkar via Twitter, Facebook
-+ Spara bokmärken till [Kippt](http://kippt.com) och/eller läs senare via [Pocket](http://getpocket.com)
-
 ### Installera
 
 + SE [Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
@@ -27,19 +14,19 @@
 
 ### Skärmdumpar
 
-![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/review.png)
+![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/gradvis1.png)
 
-Skivrecensioner
+Skivrecensioner med Spotify-widgets
 
-![Årets album](https://dl.dropboxusercontent.com/u/1162759/year.png)
+![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/gradvis2.png)
 
-Årets album
+Twittra utvald text
 
-![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/article.png)
+![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/gradvis3.png)
 
-Artikel
+Artiklar i 2-spaltstext
 
-![Dela och spara](https://dl.dropboxusercontent.com/u/1162759/share.png)
+![Dela och spara](https://dl.dropboxusercontent.com/u/1162759/gradvis4.png)
 
 Dela och spara
 
