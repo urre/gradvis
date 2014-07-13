@@ -184,7 +184,7 @@
             Gradvis.applyKeyword(selectorz,opta);
         },
 
-        // Regular "Skivrecensioner"
+        // Skivrecensioner
         regularlist: function(){
 
             // Wrap Betyg in span tags, and use this as a starting point for finding album and artists
@@ -195,7 +195,7 @@
             }).wrap('<span class="betyg"></span>')
             .end();
 
-                // Start from Betyg span and traverse the DOM from here
+                // Start from Betyg span and traverse up the DOM from here
                 $("span:contains('Betyg:')").each(function() {
 
                     var artist       = $(this).prev().prev().prev()[0].previousSibling.nodeValue.trim();
@@ -218,22 +218,24 @@
                             // Check returned data from Spotify API
                             if($.isEmptyObject(data.albums) == false) {
 
+                                // Get fist album uri from query
                                 first_uri = data.albums[0].href;
 
+                                // Find artist name and define regex
                                 var spotify_artist_name = data.albums[0].artists[0].name;
                                 var regex = new RegExp(album_title_clean, 'g');
-
 
                                 // Check if spotify artist name exists in splitted artist name array. For Gradvis spelling issues :)
                                 var found = $.inArray(spotify_artist_name, artist_parts) > -1;
 
-                                // Make link and include Spotify play button widget
+                                // Create linkable album name and add Read-more links
                                 if(found !== -1) {
                                     var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+first_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                                    var discover_links = '<div class="discover">'+artist+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a></div>';
+                                    var discover_links = '<div class="discover">'+artist+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a><a class="google" alt="Googla på '+artist+'" href="http://www.google.com/search?q='+encodeURIComponent(artist)+'"></a></div>';
                                     $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
                                 }
 
+                                // Remove duplicate links
                                 Gradvis.remove_duplicate_links();
 
                             } else {
@@ -242,6 +244,7 @@
                             }
                         },
                         error: function(data) {
+
 
 
                         }
@@ -270,23 +273,13 @@
 
         get_artist_playbutton: function(artist_name, artist_name_clean, album_title, album_title_clean){
 
-            // Use Spotify Metadata API, now searching for album by artist name
-            $.ajax({
-                type: "GET",
-                url: "http://ws.spotify.com/search/1/album.json?q=artist:"+artist_name+"",
-                dataType: "json",
-                success: function (data) {
-                    var album_uri = data.albums[0].href;
-                    var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+album_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                    var discover_links = '<div class="discover">'+artist_name+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_name_clean+'" alt="Upptäck mer på All music"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist_name)+'" alt="Upptäck mer på Wikipedia"></a></div>';
-                    $('#main p').replaceText(album_title, '<a href="spotify:search:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
+                // Discover links and linkable Album title
+                var discover_links = '<p class="noembed"><em>* '+album_title+' kunde inte bäddas in som playwidget från Spotify </em></small></p><div class="discover">'+artist_name+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_name+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist_name)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist_name)+'" alt="Upptäck mer på Wikipedia"></a><a class="google" alt="Googla på '+artist_name+'" href="http://www.google.com/search?q='+encodeURIComponent(artist_name)+'"></a></div>';
 
-                    Gradvis.remove_duplicate_links();
+                $('#main p').replaceText(album_title, '<a href="spotify:search:'+album_title_clean+'" class="spotify">'+album_title+' *<\/a>'+discover_links+'' );
 
-                }
-
-            });
-
+                // Remove duplicate links
+                Gradvis.remove_duplicate_links();
 
         },
 
