@@ -133,8 +133,6 @@
                     // Get raw text node value
                     var tt = $(this).nextAll("br").get(0).nextSibling.nodeValue;
 
-                    console.log(tt);
-
                     // Check heading
                     if(tt.indexOf("Årets") == -1 && $.inArray(tt, notspotifyble) == -1) {
 
@@ -149,7 +147,6 @@
                             var tp_title_spaces = tp_title.replace(/, /g, ' ');
                             var tp_clean = tp_title.replace(/, /g, ' ').replace(/ /g, '+');
 
-                            console.log(tp_clean);
 
                                 // Wrap strings with spotify links
                                opta.keys[i] =
