@@ -5,6 +5,7 @@
  *
  * Gradvis, an Chrome extension enhancing Gradvall.se
  * Code by @urre
+ * Sorry for the mess :(
  *
  */
 
