@@ -12,10 +12,10 @@
 + SE [Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
 + EN [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
 
-## Changelog
+### Changelog
 + 2015-11-23: 1.2.0: Now using 1 col for text, remove Pocket and Kippt buttons.
 
-### Licens
+#### License
 The MIT License (MIT)
 
 Copyright (c) 2015 Urban Sanden
