@@ -27,6 +27,7 @@
 
             // Tweet highlighted text
             this.tweetHighlights();
+
         },
 
         // Wrap Jan Gradvis in Twitter links to @janGradvis
@@ -55,32 +56,13 @@
             var Gradvis_title = $(document).find("title").text();
 
             // Kippt button
-           $('#main').append('<h4 class="share">Dela och spara</h4>');
+           $('#main').append('<h4 class="share">Dela</h4>');
 
             // Tweet button
             $('#main').append('<a class="twitter-save-button" href="http://twitter.com/intent/tweet?text='+encodeURIComponent(Gradvis_title)+'&url='+encodeURIComponent(Gradvis_url)+'&via=janGradvis">Dela på Twitter</a>');
 
             // Facebook button
-            $('#main').append('<a class="facebook-save-button" href="http://www.facebook.com/sharer.php?s=100&p[title]='+encodeURIComponent(Gradvis_title) + '&p[url]=' + encodeURIComponent(Gradvis_url)+'">Dela</a>');
-
-            // Kippt button
-            $('#main').append('<a href="https://kippt.com/save" class="kippt-save-button" data-url="'+Gradvis_url+'" data-title="'+Gradvis_title+'" data-source="Gradvis.se">Spara til Kippt</a>');
-
-            // Handle Kippt click
-            $(".kippt-save-button").on("click", function(e){
-                e.preventDefault();
-                var elem = e.currentTarget;
-                var url = encodeURIComponent($(elem).data("url")),
-                    title= encodeURIComponent($(elem).data("title")),
-                    source = encodeURIComponent($(elem).data("source")),
-                    via = encodeURIComponent($(elem).data("via"));
-
-                var windowUrl = "https://kippt.com/extensions/new?url="+ url +"&title="+ title +"&source="+ source +"&via="+ via;
-                window.open(windowUrl, "kippt-popup", "location=no,menubar=no,status=no,titlebar=no,scrollbars=no,width=420,height=192");
-            });
-
-            // Pocket button
-            $('#main').append('<a class="pocket-save-button" href="http://getpocket.com/edit">Pocket</a>');
+            $('#main').append('<a class="facebook-save-button" href="http://www.facebook.com/sharer.php?s=100&p[title]='+encodeURIComponent(Gradvis_title) + '&p[url]=' + encodeURIComponent(Gradvis_url)+'">Dela på Facebook</a>');
         },
 
         // Find keyword (ie. text node) and wrap it with dom element (argument)
@@ -116,8 +98,9 @@
             } else {
 
                 var kind = $.trim($('#main').find('h1').next('p').html().split("<br>")[0]);
+                var kind_whole = $.trim($('#main').find('h1').next('p').html().split(" ")[0]);
 
-                if(kind.indexOf('Årets') >= 0) {
+                if(kind.indexOf('Årets') >= 0 || kind_whole.indexOf('Årets') >= 0) {
                     Gradvis.yearlist();
                 } else {
                     Gradvis.regularlist();
@@ -138,16 +121,18 @@
                 keys: []
             };
 
-            // Selector, not a label och select element
+            // Selector, not a label and select elements
             var selectorz = ":visible:not(:input):not(label):not(select)";
 
-            // Get att br tags, make text node selections from here
+            // Get all br tags, make text node selections from first br
             $("#main p br").each(function(i) {
 
-                if($(this).nextAll("br").get(1)) {
+                if($(this).nextAll("br").get(2)) {
 
                     // Get raw text node value
                     var tt = $(this).nextAll("br").get(0).nextSibling.nodeValue;
+
+                    console.log(tt);
 
                     // Check heading
                     if(tt.indexOf("Årets") == -1 && $.inArray(tt, notspotifyble) == -1) {
@@ -162,6 +147,8 @@
                             var tp_title = to;
                             var tp_title_spaces = tp_title.replace(/, /g, ' ');
                             var tp_clean = tp_title.replace(/, /g, ' ').replace(/ /g, '+');
+
+                            console.log(tp_clean);
 
                                 // Wrap strings with spotify links
                                opta.keys[i] =

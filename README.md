@@ -7,33 +7,18 @@
 
 > En hyllning till Jan Gradvalls texter.
 
-### Installera
+### Install
 
 + SE [Installera tillägget](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests välkomna!
 + EN [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
 
-### Skärmdumpar
-
-![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/gradvis1.png)
-
-Skivrecensioner med Spotify-widgets
-
-![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/gradvis2.png)
-
-Twittra utvald text
-
-![Skivrecensioner](https://dl.dropboxusercontent.com/u/1162759/gradvis3.png)
-
-Artiklar i 2-spaltstext
-
-![Dela och spara](https://dl.dropboxusercontent.com/u/1162759/gradvis4.png)
-
-Dela och spara
+## Changelog
++ 2015-11-23: 1.2.0: Now using 1 col for text, remove Pocket and Kippt buttons.
 
 ### Licens
 The MIT License (MIT)
 
-Copyright (c) 2013 Urban Sanden
+Copyright (c) 2015 Urban Sanden
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
