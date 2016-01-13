@@ -89,6 +89,23 @@
 	display: inline-block !important;
 }
 
+
+
+.discover .youtube:after {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-left: 10px;
+	margin-right: 2px;
+	text-decoration: none;
+	background-size: 16px 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAS1BMVEXoLR3oMCDoNCTpOivqQTPrSjzsVUjtYVXtYlbvcGXxf3XyjoX0nZb1rKb3u7b5ycX5ysb61tP74d/86uj98fD+9/f++/v+/v7////P0feWAAAAU0lEQVR42uXSxw3AMAxD0TQ7PY6d9vefNBuIBx3N8wMESmqqyzEIwL0IAGcQgGdtbQA5CsC7dTaAMgnAt/c2gGuWwDWijK6aObpWnYI4t3yYevMDRdsLu9HhYyYAAAAASUVORK5CYII=) !important;
+	background-repeat: no-repeat;
+	opacity: 1;
+	vertical-align: middle !important;
+}
+
 .discover .allmusic:after {
 	content: '';
 	display: inline-block;

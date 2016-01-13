@@ -1,0 +1,36 @@
+{
+  "name": "gradvis",
+  "title": "Förbättrar läsupplevelsen på www.gradvall.se och skapar automatiska Spotify-widgets på skivrecensioner.",
+  "url": "https://linknest.cc",
+  "author": "Urban Sanden",
+  "version": "1.3.0",
+  "private": true,
+  "dependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-changed": "*",
+    "gulp-concat": "*",
+    "gulp-csslint": "*",
+    "gulp-cssmin": "*",
+    "gulp-header": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-plumber": "*",
+    "gulp-rev": "*",
+    "gulp-rev-collector": "*",
+    "gulp-sass": "*",
+    "gulp-size": "*",
+    "gulp-uglify": "*",
+    "gulp-vinyl-zip": "^1.1.2",
+    "imagemin-pngcrush": "*",
+    "jshint-stylish": "*",
+    "require-dir": "*"
+  },
+  "devDependencies": {
+    "gulp-zip": "^3.0.2",
+    "imagemin-gifsicle": "*",
+    "imagemin-jpegtran": "*",
+    "imagemin-pngquant": "*"
+  }
+}

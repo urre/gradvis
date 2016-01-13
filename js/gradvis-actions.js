@@ -4,17 +4,17 @@
  *
  *
  * Gradvis, an Chrome extension enhancing Gradvall.se
- * Code by @urre
+ * Spagetti Code by @urre
  * Sorry for the mess :(
  *
  */
 
 (function($) {
 
-    "use strict";
+  "use strict";
 
     var Gradvis = {
-
+    
         init: function() {
 
             // Check list type, Year review or regular reviews
@@ -56,7 +56,6 @@
             var Gradvis_url = window.location.href;
             var Gradvis_title = $(document).find("title").text();
 
-            // Kippt button
            $('#main').append('<h4 class="share">Dela</h4>');
 
             // Tweet button
@@ -149,12 +148,8 @@
 
 
                                 // Wrap strings with spotify links
-                               opta.keys[i] =
-                               {
-                                   keyword: tp_title,
-                                   prefix:'<a href="spotify:search:'+tp_clean+'" class="spotify">',
-                                   suffix:'</a>',
-                                   partials: true
+                               opta.keys[i] = {
+                               
                                };
 
                         }
@@ -216,7 +211,7 @@
                                 // Create linkable album name and add Read-more links
                                 if(found !== -1) {
                                     var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+first_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                                    var discover_links = '<div class="discover">'+artist+'<a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a><a class="google" alt="Googla på '+artist+'" href="http://www.google.com/search?q='+encodeURIComponent(artist)+'"></a></div>';
+                                    var discover_links = '<div class="discover">'+artist+'<a class="youtube" href="https://www.youtube.com/results?search_query='+encodeURIComponent(artist_clean)+'-'+encodeURIComponent(album_title_clean)+'">'+artist+'</a><a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a><a class="google" alt="Googla på '+artist+'" href="http://www.google.com/search?q='+encodeURIComponent(artist)+'"></a></div>';
                                     $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
                                 }
 

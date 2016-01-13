@@ -13,6 +13,7 @@
 + EN [Install the extension.](https://chrome.google.com/extensions/detail/mcffgejkidnkpanclecjbopafdicgljn) Feedback, issues and pull requests welcome!
 
 ### Changelog
++ 2016-01-13: 1.3.0: Added YouTube icon for search YouTube directly from reviews
 + 2015-11-23: 1.2.0: Now using 1 col for text, remove Pocket and Kippt buttons.
 
 #### License
