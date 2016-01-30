@@ -102,9 +102,9 @@
 
                 if(kind.indexOf('Årets') >= 0 || kind_whole.indexOf('Årets') >= 0) {
                     Gradvis.yearlist();
+
                 } else {
                     Gradvis.regularlist();
-
                 }
 
             }
@@ -183,7 +183,7 @@
                     var artist_parts = artist_clean.split("+");
 
                     var album_title       = $(this).prev().prev()[0].previousSibling.nodeValue.trim();
-                    var album_title_clean = album_title.replace(/Titel: /g, '').replace(/\s/g,"+").replace(/Titel. /g, '');
+                    var album_title_clean = album_title.replace(/Titel: /g, '').replace(/\s/g,"+").replace(/Titel. /g, '').replace(/– med flera/g, '')
 
                     var first_uri;
                     var artist_uri;
@@ -191,29 +191,25 @@
                     // Use Spotify Metadata API
                     $.ajax({
                         type: "GET",
-                        url: "http://ws.spotify.com/search/1/album?q=album:"+album_title_clean+"+artist:"+artist_clean+"",
+                        url: "https://api.spotify.com/v1/search/?q="+album_title_clean+"+"+artist_clean+"&type=album",
                         dataType: "json",
                         success: function (data) {
 
                             // Check returned data from Spotify API
-                            if($.isEmptyObject(data.albums) == false) {
+                            if($.isEmptyObject(data.albums.items[0]) == false) {
 
                                 // Get fist album uri from query
-                                first_uri = data.albums[0].href;
+                                var first_uri = data.albums.items[0].uri;
 
-                                // Find artist name and define regex
-                                var spotify_artist_name = data.albums[0].artists[0].name;
+                                // Define regex
                                 var regex = new RegExp(album_title_clean, 'g');
 
-                                // Check if spotify artist name exists in splitted artist name array. For Gradvis spelling issues :)
-                                var found = $.inArray(spotify_artist_name, artist_parts) > -1;
-
                                 // Create linkable album name and add Read-more links
-                                if(found !== -1) {
-                                    var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+first_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
-                                    var discover_links = '<div class="discover">'+artist+'<a class="youtube" href="https://www.youtube.com/results?search_query='+encodeURIComponent(artist_clean)+'-'+encodeURIComponent(album_title_clean)+'"></a><a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a><a class="google" alt="Googla på '+artist+'" href="http://www.google.com/search?q='+encodeURIComponent(artist)+'"></a></div>';
-                                    $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
-                                }
+                                var first_play_button = '<iframe src="https://embed.spotify.com/?uri='+first_uri+'" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>';
+                                
+                                
+                                var discover_links = '<div class="discover">'+artist+'<a class="youtube" href="https://www.youtube.com/results?search_query='+encodeURIComponent(artist_clean)+'-'+encodeURIComponent(album_title_clean)+'"></a><a class="allmusic" href="http://www.allmusic.com/search/artists/'+artist_clean+'" alt="Upptäck mer på All music"></a><a class="discogs" href="http://www.discogs.com/search/?type=release&title=&credit=&artist='+encodeURIComponent(artist)+'&genre=&label=&style=&track=&country=&catno=&year=&barcode=&submitter=&anv=&contributor=&format=&advanced=1" alt="Upptäck mer på Discogs"></a><a class="wikipedia" href="http://en.wikipedia.org/w/index.php?search='+encodeURIComponent(artist)+'" alt="Upptäck mer på Wikipedia"></a><a class="google" alt="Googla på '+artist+'" href="http://www.google.com/search?q='+encodeURIComponent(artist)+'"></a></div>';
+                                $('#main p').replaceText(album_title, '<a href="spotify:search:album:'+album_title_clean+'" class="spotify">'+album_title+'<\/a>'+first_play_button+discover_links+'' );
 
                                 // Remove duplicate links
                                 Gradvis.remove_duplicate_links();
